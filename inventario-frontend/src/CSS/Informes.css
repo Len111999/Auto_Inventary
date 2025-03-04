@@ -1,0 +1,160 @@
+/* Efecto cromático en la página completa */
+.informe-page{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4);
+    background-size: 400% 400%; /* Amplía el gradiente para que fluya suavemente */
+    animation: gradient-animation 10s ease infinite; /* Animación fluida */
+}
+
+/* Animación del gradiente */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.informe-container {
+    max-width: 175vh;
+    margin: 120px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    border: 5px solid transparent; /* Borde cromático */
+    border-image: linear-gradient(45deg, red, yellow, green, blue) 6; /* Gradiente con colores primarios */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    animation: border-gradient-animation 6s ease infinite; /* Animación del borde */
+}
+
+/* Animación del borde cromático */
+@keyframes border-gradient-animation {
+    0% {
+        border-image-source: linear-gradient(45deg, red, yellow, green, blue);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, blue, green, yellow, red);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, red, yellow, green, blue);
+    }
+}
+/* Título del informe */
+.informe-title {
+    font-size: 2rem;
+    color: #333; /* Gris oscuro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+.informe-button {
+    background: linear-gradient(145deg, #001f3f, #003f7f); /* Gradiente azul oscuro */
+    margin-left: 15px;
+    color: white; /* Texto blanco */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    font-size: 1.2rem; /* Tamaño de texto más pequeño */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 10px 30px; /* Espaciado ajustado */
+    border: none; /* Sin bordes visibles */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 
+        inset 0 0 10px rgba(0, 255, 255, 0.5), /* Sombra interna azul */
+        0 0 10px rgba(0, 255, 255, 0.8), /* Brillo externo */
+        0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra proyectada */
+    cursor: pointer; /* Indicador de clic */
+    position: relative; /* Posicionamiento para efectos adicionales */
+    transition: all 0.3s ease-in-out; /* Transiciones suaves */
+}
+/* Hover para el botón "Procesar PDF" */
+.informe-button:hover {
+    background: linear-gradient(145deg, #003f7f, #005fbf); /* Fondo más brillante */
+    box-shadow: 
+        inset 0 0 15px rgba(0, 255, 255, 0.7), 
+        0 0 20px rgba(0, 255, 255, 1), 
+        0 10px 30px rgba(0, 0, 0, 0.7);
+    transform: translateY(-2px); /* Efecto de levitación */
+}
+/* Active para el botón "Procesar PDF" */
+.informe-button:active {
+    background: linear-gradient(145deg, #001f3f, #003f7f); /* Fondo más oscuro */
+    box-shadow: 
+        inset 0 0 20px rgba(0, 0, 50, 0.8),
+        0 5px 15px rgba(0, 0, 0, 0.7);
+    transform: translateY(2px); /* Simula presión */
+}
+/* Estilo para el botón "Eliminar" */
+.delete-button {
+    background: linear-gradient(145deg, #3f001f, #7f003f); /* Gradiente rojo oscuro */
+    color: white; /* Texto blanco */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    font-size: 1.2rem; /* Tamaño de texto más pequeño */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 10px 30px; /* Espaciado ajustado */
+    border: none; /* Sin bordes visibles */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 
+        inset 0 0 10px rgba(255, 0, 0, 0.5), /* Sombra interna roja */
+        0 0 10px rgba(255, 0, 0, 0.8), /* Brillo externo */
+        0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra proyectada */
+    cursor: pointer; /* Indicador de clic */
+    position: relative; /* Posicionamiento para efectos adicionales */
+    transition: all 0.3s ease-in-out; /* Transiciones suaves */
+}
+/* Hover para el botón "Eliminar" */
+.delete-button:hover {
+    background: linear-gradient(145deg, #7f003f, #bf005f); /* Fondo más brillante */
+    box-shadow: 
+        inset 0 0 15px rgba(255, 0, 0, 0.7), 
+        0 0 20px rgba(255, 0, 0, 1), 
+        0 10px 30px rgba(0, 0, 0, 0.7);
+    transform: translateY(-2px); /* Efecto de levitación */
+}
+
+/* Active para el botón "Eliminar" */
+.delete-button:active {
+    background: linear-gradient(145deg, #3f001f, #7f003f); /* Fondo más oscuro */
+    box-shadow: 
+        inset 0 0 20px rgba(50, 0, 0, 0.8),
+        0 5px 15px rgba(0, 0, 0, 0.7);
+    transform: translateY(2px); /* Simula presión */
+}
+/* Listado de informes */
+.informe-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* Mensaje informativo */
+.informe-message.success {
+    color: #4caf50; /* Verde para éxito */
+    font-weight: bold;
+}
+.informe-message.warning {
+    color: #ff9800; /* Naranja para advertencias */
+}
+.informe-message.error {
+    color: #f44336; /* Rojo para errores */
+    font-weight: bold;
+}
+.process-missing-button {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.process-missing-button:hover {
+    background-color: #d35400;
+}

@@ -1,0 +1,135 @@
+/* Estilo general del Dashboard */
+.dashboard {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #f8f9fa;
+}
+.dashboard-cards {
+  gap: 20px;
+  max-width: auto; /* Ancho total del contenedor */
+}
+  /* Título principal */
+.dashboard-title {
+  margin-top: 80px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+  /* Estilo para cada tarjeta */
+.card {
+  max-width: 175vh;
+  margin: auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+  border: 5px solid transparent; /* Borde cromático */
+  border-image: linear-gradient(45deg, red, yellow, green, blue) 6; /* Gradiente con colores primarios */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  animation: border-gradient-animation 6s ease infinite; /* Animación del borde */
+}
+  
+  /* Efecto hover para tarjetas */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border-color: var(--hover-color, #b3fee9);
+}
+  
+  /* Contenido dentro de las tarjetas */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+  
+.card-content h2 {
+  font-size: 1.2rem;
+  color: #444;
+}
+  
+.card-content p {
+  font-size: 0.9rem;
+  color: #777;
+}
+  
+  /* Icono dentro de las tarjetas */
+.card-icon {
+  font-size: 3rem;
+  color: var(--hover-color, #b3fee9);
+}
+  
+  /* Responsividad para dispositivos pequeños */
+@media (max-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+  }
+}
+.card-content-horizontal {
+    display: flex;
+    flex-direction: row; /* Alinea en una fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px;
+}
+
+.chart-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 350px; /* Limita el ancho máximo de la gráfica */
+  margin: auto; /* Centrado dentro del contenedor */
+}
+/* Contenedor general del estado del inventario */
+.low-inventory-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px; /* Separación con el borde izquierdo */
+  font-family: 'Arial', sans-serif; /* Cambia a la fuente deseada */
+  font-size: 1.2rem; /* Aumenta el tamaño de la letra */
+  line-height: 1.8; /* Espaciado entre líneas */
+}
+/* Estilo de los títulos */
+.low-inventory-container h3 {
+  font-size: 1.8rem; /* Tamaño más grande para el título */
+  font-weight: bold; /* Negrita para el título */
+  color: #444; /* Color neutro */
+  margin-bottom: 15px;
+}
+/* Estilo de los productos con bajo inventario */
+.low-inventory-list li {
+  margin: 5px 0;
+  color: #d9534f; /* Rojo para destacar bajo inventario */
+  font-weight: bold; /* Negrita para resaltar */
+  font-size: 1.2rem; /* Ajuste del tamaño de letra */
+}
+/* Estilo de los productos con inventario completo */
+.good-inventory-list li {
+  margin: 5px 0;
+  color: #28a745; /* Verde para buen inventario */
+  font-weight: bold;
+  font-size: 1.2rem; /* Ajuste del tamaño de letra */
+}
+/* Botón para realizar pedido */
+.order-button {
+  margin-top: 20px;
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.2rem; /* Ajusta el tamaño de la letra */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.order-button:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}

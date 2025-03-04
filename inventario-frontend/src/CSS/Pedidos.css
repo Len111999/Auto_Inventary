@@ -1,0 +1,140 @@
+.pedidos-container {
+    max-width: 175vh;
+    margin: 80px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 5px solid transparent;
+    border-image: linear-gradient(45deg, red, yellow, green, blue) 6;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+/* Estilo general para las tablas */
+.pedidos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.pedidos-table thead tr {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pedidos-table th,
+.pedidos-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.pedidos-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.pedidos-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    background-color: #17a2b8;
+}
+
+/* Botón: Mostrar Todos */
+.mostrar-todos-button {
+    background: linear-gradient(145deg, #3295a4, #17a2b8); /* Gradiente rojo oscuro */
+    color: white; /* Texto blanco */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    font-size: 1.2rem; /* Tamaño de texto más pequeño */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 10px 30px; /* Espaciado ajustado */
+    border: none; /* Sin bordes visibles */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 
+        inset 0 0 10px #17a2b8, /* Sombra interna roja */
+        0 0 10px #17a2b8, /* Brillo externo */
+        0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra proyectada */
+    cursor: pointer; /* Indicador de clic */
+    position: relative; /* Posicionamiento para efectos adicionales */
+    transition: all 0.3s ease-in-out; /* Transiciones suaves */
+}
+
+.mostrar-todos-button:hover {
+    background: linear-gradient(145deg, #17a2b8, #17a2b8); /* Fondo más brillante */
+    box-shadow: 
+        inset 0 0 15px #17a2b8, 
+        0 0 20px #17a2b8, 
+        0 10px 30px rgba(0, 0, 0, 0.7);
+    transform: translateY(-2px); /* Efecto de levitación */
+}
+.mostrar-todos-button:active{
+    background: linear-gradient(145deg, #17a2b8, #17a2b8); /* Fondo más oscuro */
+    box-shadow: 
+        inset 0 0 20px #0d5965,
+        0 5px 15px #0a4953;
+    transform: translateY(2px); /* Simula presión */
+}
+
+/* Botón: Reponer Producto */
+.reponer-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reponer-button:hover {
+    background-color: #218838;
+}
+
+/* Historial de Pedidos - Títulos */
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+}
+.pedidos-container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right, #ff7e5f, #feb47b) 1;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.eliminar-historial-button {
+    background: linear-gradient(145deg, #3f001f, #7f003f); /* Gradiente rojo oscuro */
+    color: white; /* Texto blanco */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    font-size: 1.2rem; /* Tamaño de texto más pequeño */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 10px 30px; /* Espaciado ajustado */
+    border: none; /* Sin bordes visibles */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 
+        inset 0 0 10px rgba(255, 0, 0, 0.5), /* Sombra interna roja */
+        0 0 10px rgba(255, 0, 0, 0.8), /* Brillo externo */
+        0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra proyectada */
+    cursor: pointer; /* Indicador de clic */
+    position: relative; /* Posicionamiento para efectos adicionales */
+    transition: all 0.3s ease-in-out; /* Transiciones suaves */
+}
+
+.eliminar-historial-button:hover {
+    background: linear-gradient(145deg, #7f003f, #bf005f); /* Fondo más brillante */
+    box-shadow: 
+        inset 0 0 15px rgba(255, 0, 0, 0.7), 
+        0 0 20px rgba(255, 0, 0, 1), 
+        0 10px 30px rgba(0, 0, 0, 0.7);
+    transform: translateY(-2px); /* Efecto de levitación */
+}
+
+.eliminar-historial-button:active {
+    background: linear-gradient(145deg, #3f001f, #7f003f); /* Fondo más oscuro */
+    box-shadow: 
+        inset 0 0 20px rgba(50, 0, 0, 0.8),
+        0 5px 15px rgba(0, 0, 0, 0.7);
+    transform: translateY(2px); /* Simula presión */
+}

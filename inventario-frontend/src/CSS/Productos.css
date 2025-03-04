@@ -1,0 +1,46 @@
+/* Productos.css */
+
+/* 1. Estilo general de la tabla */
+.table-container {
+    margin-top: 20px;
+    /* Ajusta la altura deseada (ej. 10 filas ~ 400-450px) */
+    max-height: 400px;
+    /* Hace que aparezca el scroll vertical */
+    overflow-y: auto;
+  
+    /* Opcional: borde alrededor del contenedor */
+    border: 1px solid #000;
+  }
+.styled-table {
+    width: 100%;
+    border-collapse: collapse; /* Quita espacios entre celdas */
+    margin-top: 20px;
+    font-family: Arial, sans-serif; /* Ajusta la fuente a tu gusto */
+  }
+  
+  /* 2. Borde para toda la tabla y celdas */
+  .styled-table,
+  .styled-table th,
+  .styled-table td {
+    border: 1px solid #000; /* Borde negro */
+  }
+  
+  /* 3. Encabezado con fondo gris y texto centrado */
+  .styled-table thead th {
+    background-color: #D9E1F2; /* Color de fondo similar a la imagen */
+    text-align: center;
+    padding: 8px 12px;
+  }
+  
+  /* 4. Celdas del cuerpo */
+  .styled-table td {
+    padding: 8px 12px;
+    vertical-align: middle; /* Alineación vertical centrada */
+  }
+  
+  /* 5. Pie de tabla (tfoot) */
+  .styled-table tfoot td {
+    background-color: #f2f2f2; /* Un ligero gris para distinguirlo */
+    padding: 8px 12px;
+  }
+  
